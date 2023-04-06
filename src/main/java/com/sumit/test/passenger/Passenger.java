@@ -1,4 +1,5 @@
-package com.sumit.test;
+package com.sumit.test.passenger;
+
 
 import jakarta.persistence.*;
 
@@ -6,7 +7,6 @@ import jakarta.persistence.*;
 @Table(name = "passenger")
 public class Passenger {
     @Id
-
     @SequenceGenerator(name = "passenger_sequence",
                         sequenceName = "passenger_sequence",
                         allocationSize = 1)
