@@ -1,11 +1,16 @@
 package com.sumit.test.vehicle;
 
+import com.sumit.test.passenger.Passenger;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @Entity
 @Table(name = "vehicle")
+@NoArgsConstructor
 public class Vehicle {
     @Id
     @SequenceGenerator(name = "vehicle_sequence",
@@ -14,9 +19,7 @@ public class Vehicle {
     private Long id;
     private String name;
     private int capacity;
-
     private String destination;
-
     private String source;
 
 }

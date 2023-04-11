@@ -9,8 +9,8 @@ import java.util.List;
 public interface PassengerRepository extends JpaRepository<Passenger,Long> {
 
 
-    List<Passenger> findByNameAndDestination(String name, String destination);
-    List<Passenger> findByName(String name);
-    List<Passenger> findByDestination(String destination);
-
+//    List<Passenger> findPassengerByP_nameAndP_destination(String name, String destination);
+//    List<Passenger> findPassengerByP_name(String name);
+//    List<Passenger> findPassengerByP_destination(String destination);
+    List<Passenger> findByPassengerName(String name);
 }

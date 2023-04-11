@@ -26,9 +26,6 @@ public class PassengerService {
         return passengerRepository.save(passenger);
     }
 
-    public void deletePassengerDetails() {
-
-    }
 
     public String deletePassengerDetailById(Long id) {
         boolean exists=passengerRepository.existsById(id);
@@ -44,14 +41,16 @@ public class PassengerService {
     }
 
     public List<Passenger> getPassengerDetailByNameAndDestination(String name, String destination) {
-        return passengerRepository.findByNameAndDestination(name,destination);
+        return null;
+//                passengerRepository.findPassengerByP_nameAndP_destination(name,destination);
     }
 
     public List<Passenger> getpassengerDetailByName(String name) {
-        return passengerRepository.findByName(name);
+        return passengerRepository.findByPassengerName(name);
     }
 
     public List<Passenger> getPassengersDetailByDestination(String destination) {
-        return passengerRepository.findByDestination(destination);
+        return null;
+//                passengerRepository.findPassengerByP_destination(destination);
     }
 }

@@ -39,12 +39,10 @@ public class PassengerController {
 
     @PutMapping
     public ResponseEntity <Passenger> updatepassengerDetails(@RequestParam("id") Long id, @RequestBody Passenger passenger){
-        if(id!=passenger.getId())
+        if(id!=passenger.getPassengerId())
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         return new ResponseEntity(passengerService.updatePassengerDetails(passenger), HttpStatus.OK);
     }
-
-
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deletePassengerDetailById(@PathVariable("id") Long id){
